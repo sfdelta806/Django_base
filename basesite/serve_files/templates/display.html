@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+  <h1>Display Files</h1>
+  <p>This page displays the request files.</p>
+  <ul>
+    {% for item in file_list %}
+        <li>{{ item }}</li>
+    {% empty %}
+        <li>No items found.</li>
+    {% endfor %}
+  </ul>
+{% endblock content %}
